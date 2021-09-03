@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "u0xKpBqkf7NjJRLvgjKvXlY2vZDz+x2fMQgUmE2GnZoqgvXEbgePlopC+Ug1T7A1rDW8P8vPvfktMzSVrW0MOQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Murad\\source\\repos\\Viewer\\Viewer\\Viewer.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Murad\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x86\\5.0.9\\microsoft.netcore.app.runtime.win-x86.5.0.9.nupkg.sha512",
+    "C:\\Users\\Murad\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x86\\5.0.9\\microsoft.windowsdesktop.app.runtime.win-x86.5.0.9.nupkg.sha512",
+    "C:\\Users\\Murad\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x86\\5.0.9\\microsoft.aspnetcore.app.runtime.win-x86.5.0.9.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,39 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <img height="800" width="1200" src="" id="view" alt="Alternate Text" />
+</div>
+<script src="~/lib/aspnet-signalr/signalr.min.js"></script>
+<script>
+    const connection = new signalR.HubConnectionBuilder()
+        .withUrl("/viewer")
+        .configureLogging(signalR.LogLevel.Information)
+        .build();
+    console.log(connection)
+    connection.start();
+    connection.on("ViewImage", function (base64) {
+        let viewImg = document.getElementById('view');
+        let source = "data:image/png;base64, " + base64;
+        viewImg.src = source;
+    });
+
+    var example = document.getElementById('view');
+    example.onmousemove = function (e) {
+        var x = e.pageX - example.offsetLeft;
+        var y = e.pageY - example.offsetTop;
+        connection.invoke("CursorPosition", x, y);
+    }
+    example.onclick = function (e) {
+        var x = e.pageX - example.offsetLeft;
+        var y = e.pageY - example.offsetTop;
+        connection.invoke("ClickEvents", "click", x, y);
+    }
+    example.ondblclick = function (e) {
+        var x = e.pageX - example.offsetLeft;
+        var y = e.pageY - example.offsetTop;
+        connection.invoke("ClickEvents", "dblclick", x, y);
+    }
+</script>
+

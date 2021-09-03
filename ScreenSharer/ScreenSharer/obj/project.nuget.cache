@@ -1,0 +1,33 @@
+{
+  "version": 2,
+  "dgSpecHash": "zYlzRVMc9GNohhdALzSxla0E60+rc1QCxpwl/GD2QOPtUaCBjCQpq8SrZ45jJGFwbvO9A822ySmeTN6QGAFu8w==",
+  "success": true,
+  "projectFilePath": "D:\\WorkProjects\\ScreenSharer\\ScreenSharer\\ScreenSharer.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Murad\\.nuget\\packages\\microsoft.aspnetcore.connections.abstractions\\5.0.5\\microsoft.aspnetcore.connections.abstractions.5.0.5.nupkg.sha512",
+    "C:\\Users\\Murad\\.nuget\\packages\\microsoft.aspnetcore.http.connections.client\\5.0.5\\microsoft.aspnetcore.http.connections.client.5.0.5.nupkg.sha512",
+    "C:\\Users\\Murad\\.nuget\\packages\\microsoft.aspnetcore.http.connections.common\\5.0.5\\microsoft.aspnetcore.http.connections.common.5.0.5.nupkg.sha512",
+    "C:\\Users\\Murad\\.nuget\\packages\\microsoft.aspnetcore.http.features\\5.0.5\\microsoft.aspnetcore.http.features.5.0.5.nupkg.sha512",
+    "C:\\Users\\Murad\\.nuget\\packages\\microsoft.aspnetcore.signalr.client\\5.0.5\\microsoft.aspnetcore.signalr.client.5.0.5.nupkg.sha512",
+    "C:\\Users\\Murad\\.nuget\\packages\\microsoft.aspnetcore.signalr.client.core\\5.0.5\\microsoft.aspnetcore.signalr.client.core.5.0.5.nupkg.sha512",
+    "C:\\Users\\Murad\\.nuget\\packages\\microsoft.aspnetcore.signalr.common\\5.0.5\\microsoft.aspnetcore.signalr.common.5.0.5.nupkg.sha512",
+    "C:\\Users\\Murad\\.nuget\\packages\\microsoft.aspnetcore.signalr.protocols.json\\5.0.5\\microsoft.aspnetcore.signalr.protocols.json.5.0.5.nupkg.sha512",
+    "C:\\Users\\Murad\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\5.0.1\\microsoft.extensions.dependencyinjection.5.0.1.nupkg.sha512",
+    "C:\\Users\\Murad\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\5.0.0\\microsoft.extensions.dependencyinjection.abstractions.5.0.0.nupkg.sha512",
+    "C:\\Users\\Murad\\.nuget\\packages\\microsoft.extensions.logging\\5.0.0\\microsoft.extensions.logging.5.0.0.nupkg.sha512",
+    "C:\\Users\\Murad\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\5.0.0\\microsoft.extensions.logging.abstractions.5.0.0.nupkg.sha512",
+    "C:\\Users\\Murad\\.nuget\\packages\\microsoft.extensions.options\\5.0.0\\microsoft.extensions.options.5.0.0.nupkg.sha512",
+    "C:\\Users\\Murad\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.1\\microsoft.extensions.primitives.5.0.1.nupkg.sha512",
+    "C:\\Users\\Murad\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.0\\microsoft.netcore.platforms.5.0.0.nupkg.sha512",
+    "C:\\Users\\Murad\\.nuget\\packages\\microsoft.win32.registry\\5.0.0\\microsoft.win32.registry.5.0.0.nupkg.sha512",
+    "C:\\Users\\Murad\\.nuget\\packages\\system.codedom\\5.0.0\\system.codedom.5.0.0.nupkg.sha512",
+    "C:\\Users\\Murad\\.nuget\\packages\\system.diagnostics.eventlog\\5.0.0\\system.diagnostics.eventlog.5.0.0.nupkg.sha512",
+    "C:\\Users\\Murad\\.nuget\\packages\\system.io.pipelines\\5.0.1\\system.io.pipelines.5.0.1.nupkg.sha512",
+    "C:\\Users\\Murad\\.nuget\\packages\\system.management\\5.0.0\\system.management.5.0.0.nupkg.sha512",
+    "C:\\Users\\Murad\\.nuget\\packages\\system.security.accesscontrol\\5.0.0\\system.security.accesscontrol.5.0.0.nupkg.sha512",
+    "C:\\Users\\Murad\\.nuget\\packages\\system.security.principal.windows\\5.0.0\\system.security.principal.windows.5.0.0.nupkg.sha512",
+    "C:\\Users\\Murad\\.nuget\\packages\\system.serviceprocess.servicecontroller\\5.0.0\\system.serviceprocess.servicecontroller.5.0.0.nupkg.sha512",
+    "C:\\Users\\Murad\\.nuget\\packages\\system.threading.channels\\5.0.0\\system.threading.channels.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
