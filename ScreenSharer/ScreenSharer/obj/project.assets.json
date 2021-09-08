@@ -957,11 +957,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\WorkProjects\\ScreenSharer\\ScreenSharer\\ScreenSharer.csproj",
+      "projectUniqueName": "D:\\WorkProjects\\CustomTeamViewer\\ScreenSharer\\ScreenSharer\\ScreenSharer.csproj",
       "projectName": "ScreenSharer",
-      "projectPath": "D:\\WorkProjects\\ScreenSharer\\ScreenSharer\\ScreenSharer.csproj",
+      "projectPath": "D:\\WorkProjects\\CustomTeamViewer\\ScreenSharer\\ScreenSharer\\ScreenSharer.csproj",
       "packagesPath": "C:\\Users\\Murad\\.nuget\\packages\\",
-      "outputPath": "D:\\WorkProjects\\ScreenSharer\\ScreenSharer\\obj\\",
+      "outputPath": "D:\\WorkProjects\\CustomTeamViewer\\ScreenSharer\\ScreenSharer\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

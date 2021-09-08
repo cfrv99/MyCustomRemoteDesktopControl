@@ -26,8 +26,7 @@ namespace Viewer
             services.AddSignalR(o=>
             {
                 o.EnableDetailedErrors = true;
-                o.MaximumReceiveMessageSize = null;
-
+                o.MaximumReceiveMessageSize = 3988000;
             });
             services.AddControllersWithViews();
         }

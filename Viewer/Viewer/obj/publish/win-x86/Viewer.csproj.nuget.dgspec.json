@@ -1,23 +1,22 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Murad\\source\\repos\\Viewer\\Viewer\\Viewer.csproj": {}
+    "D:\\WorkProjects\\CustomTeamViewer\\Viewer\\Viewer\\Viewer.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Murad\\source\\repos\\Viewer\\Viewer\\Viewer.csproj": {
+    "D:\\WorkProjects\\CustomTeamViewer\\Viewer\\Viewer\\Viewer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Murad\\source\\repos\\Viewer\\Viewer\\Viewer.csproj",
+        "projectUniqueName": "D:\\WorkProjects\\CustomTeamViewer\\Viewer\\Viewer\\Viewer.csproj",
         "projectName": "Viewer",
-        "projectPath": "C:\\Users\\Murad\\source\\repos\\Viewer\\Viewer\\Viewer.csproj",
+        "projectPath": "D:\\WorkProjects\\CustomTeamViewer\\Viewer\\Viewer\\Viewer.csproj",
         "packagesPath": "C:\\Users\\Murad\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Murad\\source\\repos\\Viewer\\Viewer\\obj\\publish\\win-x86\\",
+        "outputPath": "D:\\WorkProjects\\CustomTeamViewer\\Viewer\\Viewer\\obj\\publish\\win-x86\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Murad\\NuGet.Config",
           "C:\\Users\\Murad\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
@@ -27,8 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {},
-          "https://www.myget.org/F/blazorise/api/v3/index.json": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net5.0": {

@@ -21,6 +21,8 @@ namespace Viewer
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder.UseStartup<Startup>();
+                    webBuilder.UseKestrel();
+                    webBuilder.UseUrls("http://192.168.0.106:5001");
                 });
     }
 }
