@@ -48,12 +48,15 @@ namespace ScreenSharer
         }
         private void SetMousePorisitionInScreen(int x, int y)
         {
-            double cofisient = Math.Round(0.4901960, 3);
-            var yNis = Math.Round(0.78431372549, 5);
-            var xNis = Math.Round(0.625, 3);
-            var xPos = (int)Math.Round(x / xNis, 2);
-            var yPos = (int)Math.Round(y / yNis, 2);
-            SetCursorPos(xPos, yPos);
+            new Thread(() =>
+            {
+                var yNis = Math.Round(0.78431372549, 5);
+                var xNis = Math.Round(0.625, 3);
+                var xPos = (int)Math.Round(x / xNis, 2);
+                var yPos = (int)Math.Round(y / yNis, 2);
+                SetCursorPos(xPos, yPos);
+            }).Start();
+            
         }
         private void SetMouseClickInScreen(string clickType, int x, int y)
         {
@@ -106,32 +109,54 @@ namespace ScreenSharer
 
             MoveWindow(chromeProcess.MainWindowHandle, screenOfChoice.WorkingArea.Right, screenOfChoice.WorkingArea.Top, screenOfChoice.WorkingArea.Width, screenOfChoice.WorkingArea.Height, false);
         }
+        private ImageCodecInfo GetEncoder(ImageFormat format)
+        {
+            ImageCodecInfo[] codecs = ImageCodecInfo.GetImageDecoders();
+            foreach (ImageCodecInfo codec in codecs)
+            {
+                if (codec.FormatID == format.Guid)
+                {
+                    return codec;
+                }
+            }
+            return null;
+        }
         private async void button1_Click(object sender, EventArgs e)
         {
             await _hubConnection.StartAsync();
-            string base64Image;
-            while (true)
+            var thread = new Thread(async () =>
             {
-                Rectangle bound = Screen.PrimaryScreen.Bounds;
-                Bitmap screenshot = new Bitmap(bound.Width, bound.Height, System.Drawing.Imaging.PixelFormat.Format32bppArgb);
-                Graphics graphics = Graphics.FromImage(screenshot);
-                graphics.CopyFromScreen(bound.X, bound.Y, 0, 0, bound.Size, CopyPixelOperation.SourceCopy);
-                screenshot = new Bitmap(screenshot, bound.Width, bound.Height);
-
-                string sigBase64 = null;
-                using (var ms = new MemoryStream())
+                while (true)
                 {
-                    screenshot.Save(ms, ImageFormat.Png);
-                    var bytes = ms.ToArray();
-                    sigBase64 = Convert.ToBase64String(ms.ToArray());
-                    await _hubConnection.InvokeAsync("Image", sigBase64);
+                    Thread.Sleep(1);
+                    Rectangle bound = Screen.PrimaryScreen.Bounds;
+                    ImageCodecInfo pngEncoder = GetEncoder(ImageFormat.Png);
+                    System.Drawing.Imaging.Encoder myEncoder =
+                                                               System.Drawing.Imaging.Encoder.Quality;
+                    EncoderParameters myEncoderParameters = new EncoderParameters(1);
+
+                    EncoderParameter myEncoderParameter = new EncoderParameter(myEncoder,
+                        50L);
+                    myEncoderParameters.Param[0] = myEncoderParameter;
+                    Bitmap screenshot = new Bitmap(bound.Width, bound.Height, System.Drawing.Imaging.PixelFormat.Format16bppRgb555);
+                    Graphics graphics = Graphics.FromImage(screenshot);
+                    graphics.CopyFromScreen(bound.X, bound.Y, 0, 0, bound.Size, CopyPixelOperation.SourceErase);
+
+                    string sigBase64 = null;
+                    using (var ms = new MemoryStream())
+                    {
+                        screenshot.Save(ms, pngEncoder, myEncoderParameters);
+                        //var bytes = ms.ToArray();
+                        sigBase64 = Convert.ToBase64String(ms.ToArray());
+                        await _hubConnection.InvokeAsync("Image", sigBase64);
+                    }
+                    Thread.Sleep(45);
+                    GC.Collect();
                 }
+            });
+            thread.Start();
+            thread.Join();
 
-                // var image = ImageToByte(screenshot);
-                //base64Image = Convert.ToBase64String(image);
-
-                await Task.Delay(50);
-            }
 
             //await _hubConnection.StartAsync();
             //timer = new System.Timers.Timer();
